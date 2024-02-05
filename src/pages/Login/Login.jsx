@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import toast from 'react-hot-toast';
-import axios from 'axios';
-import { useAuthContext } from '../../hooks/useAuthContext';
-import './Login.css';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+import axios from "axios";
+import { useAuthContext } from "../../hooks/useAuthContext";
+import "./Login.css";
 const apiURL = import.meta.env.VITE_BACKEND_URL;
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const { dispatch } = useAuthContext();
@@ -22,17 +22,20 @@ const Login = () => {
 
       if (res.status === 200 && res.data.user && res.data.token) {
         dispatch({
-          type: 'LOGIN',
+          type: "LOGIN",
           payload: {
             accessToken: res.data.token,
             name: res.data.user.name,
           },
         });
 
-        localStorage.setItem("User", JSON.stringify({
-          accessToken: res.data.token,
-          name: res.data.user.name,
-        }));
+        localStorage.setItem(
+          "User",
+          JSON.stringify({
+            accessToken: res.data.token,
+            name: res.data.user.name,
+          })
+        );
 
         toast.success("Successfully Logged In");
 
@@ -47,13 +50,13 @@ const Login = () => {
   };
 
   return (
-    <div className='login__page__container'>
-      <div className='login__body'>
-        <h1>Login To LexiLearn</h1>
-        <div className='login__form'>
+    <div className="login__page__container">
+      <div className="login__body">
+        <h1>Login To LexiQuest</h1>
+        <div className="login__form">
           <div>
             <input
-              className='login__input'
+              className="login__input"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               type="email"
@@ -61,7 +64,7 @@ const Login = () => {
             />
             <br />
             <input
-              className='login__input'
+              className="login__input"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               type="password"
@@ -72,7 +75,8 @@ const Login = () => {
               Login
             </button>
             <h3>
-              Not Registered Yet? <Link to='/register'>Click Here</Link> to Register
+              Not Registered Yet? <Link to="/register">Click Here</Link> to
+              Register
             </h3>
           </div>
         </div>

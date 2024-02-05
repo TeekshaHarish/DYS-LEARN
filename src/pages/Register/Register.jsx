@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import toast from 'react-hot-toast';
-import axios from 'axios';
-import './Register.css';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+import axios from "axios";
+import "./Register.css";
 const apiURL = import.meta.env.VITE_BACKEND_URL;
 
 const Register = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleRegistration = async () => {
@@ -22,7 +22,7 @@ const Register = () => {
       if (res.status === 201 && res.data.user) {
         toast.success("Successfully Registered!!");
         setTimeout(() => {
-          navigate('/');
+          navigate("/");
         }, 2000);
       }
     } catch (error) {
@@ -32,13 +32,13 @@ const Register = () => {
   };
 
   return (
-    <div className='register__page__container'>
-      <div className='register__body'>
-        <h1>Register on LexiLearn</h1>
-        <div className='register__form'>
+    <div className="register__page__container">
+      <div className="register__body">
+        <h1>Register on LexiQuest</h1>
+        <div className="register__form">
           <div>
             <input
-              className='register__input'
+              className="register__input"
               value={name}
               onChange={(e) => setName(e.target.value)}
               type="text"
@@ -46,7 +46,7 @@ const Register = () => {
             />
             <br />
             <input
-              className='register__input'
+              className="register__input"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               type="email"
@@ -54,7 +54,7 @@ const Register = () => {
             />
             <br />
             <input
-              className='register__input'
+              className="register__input"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               type="password"
@@ -69,7 +69,7 @@ const Register = () => {
             />
             <br />
             <h3>
-              Already Registered? <Link to='/'>Click Here</Link> to Login
+              Already Registered? <Link to="/">Click Here</Link> to Login
             </h3>
           </div>
         </div>
