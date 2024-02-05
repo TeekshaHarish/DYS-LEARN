@@ -11,6 +11,7 @@ import Match from "./Match/Match";
 function App() {
   return (
     <Router>
+      <Demo />
       <Match />
       {/* <Routes>
         <Route path="/" element={<Login />} />

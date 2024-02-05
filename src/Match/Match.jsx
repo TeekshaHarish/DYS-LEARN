@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-
+// import { DndProvider } from "react-dnd";
+// import {HTML5Backend} from "react-dnd-html5-backend";
 const initialItems = [
   { id: "item-1", content: "Item 1" },
   { id: "item-2", content: "Item 2" },
