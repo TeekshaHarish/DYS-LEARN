@@ -52,7 +52,7 @@ const Login = () => {
   return (
     <div className="login__page__container">
       <div className="login__body">
-        <h1>Login To LexiQuest</h1>
+        <h1>Login To SwiftSpell</h1>
         <div className="login__form">
           <div>
             <input
@@ -75,8 +75,7 @@ const Login = () => {
               Login
             </button>
             <h3>
-              Not Registered Yet? <Link to="/register">Click Here</Link> to
-              Register
+              <Link to="/register">Click Here to Register</Link>
             </h3>
           </div>
         </div>

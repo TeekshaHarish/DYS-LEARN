@@ -1,6 +1,11 @@
+@import url("/src/color.css");
 .login__page__container {
-  background-color: #9cdaf8;
-  background-image: linear-gradient(315deg, #9cdaf8 0%, #98fcbd 74%);
+  background-color: color1;
+  background-image: linear-gradient(
+    315deg,
+    var(--color1) 50%,
+    var(--color3) 50%
+  );
   padding: 40px 0px;
   width: 100%;
   height: 100%;
@@ -8,53 +13,53 @@
 }
 
 .login__body {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0);
   margin: 0px 50px;
   padding: 40px;
 }
 
 .login__body h1 {
   text-align: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: cursive;
   font-size: 40px;
   margin-bottom: 40px;
-  color: white;
+  color: rgba(19, 19, 19, 0.727);
 }
 
 .login__form {
-  display: flex;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    justify-self: center;
-    background-color: black;
-    padding: 30px 20px;
-    border-radius: 25px;
-    margin-top: 40px;
+  display:flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  background-color: black;
+  padding: 30px 20px;
+  border-radius: 25px;
+  margin-top: 40px;
 }
 
 .login__form h3 {
   font-size: 20px;
-  color: white;
+  color: black;
   cursor: pointer;
   margin-top: 30px;
   margin-bottom: 0px;
 }
 
 .login__form a {
-  color: #a9fba9;
+  color: rgb(214, 99, 214);
   font-size: 22px;
 }
 
 .login__input {
-  color: white;
+  color: rgb(214, 99, 214);
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 16px;
   border-radius: 10px;
   line-height: 22px;
   background-color: transparent;
-  border-bottom: 3px solid #98ff98;
+  border-bottom: 3px solid rgb(214, 99, 214);
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 35px;
@@ -64,13 +69,13 @@
 }
 
 .login__input:focus {
-  border: 4px solid #98ff98;
+  border: 4px solid var(--color3);
 }
 
 .login__btn {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   width: 100%;
-  background: #98ff98;
+  background: rgb(214, 99, 214);
   border-radius: 15px;
   border: 0;
   cursor: pointer;
@@ -84,10 +89,10 @@
 }
 
 .login__btn:hover {
-  background: #1b8211;
+  background: var(--color3);
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .login__form {
     width: 500px;
     height: 350px;
@@ -107,7 +112,8 @@
     font-size: 24px;
     margin-bottom: 20px;
   }
-  .login__btn, .login__form h3 {
+  .login__btn,
+  .login__form h3 {
     font-size: 16px;
   }
 }

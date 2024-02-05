@@ -16,10 +16,12 @@
 
 .footer__links {
     display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    margin: 0px 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 50%; /* Adjust the space between links as needed */
     font-size: 30px;
+    text-decoration: none;
+    color: #000000; 
 }
 
 .link {

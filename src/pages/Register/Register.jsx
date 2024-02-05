@@ -34,7 +34,7 @@ const Register = () => {
   return (
     <div className="register__page__container">
       <div className="register__body">
-        <h1>Register on LexiQuest</h1>
+        <h1>Register on SwiftSpell</h1>
         <div className="register__form">
           <div>
             <input
