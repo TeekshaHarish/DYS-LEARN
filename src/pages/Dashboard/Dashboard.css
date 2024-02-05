@@ -1,5 +1,6 @@
+@import url(/src/color.css);
 .dashboard__page__container {
-    background-color: #e1ffe1;
+    background-color: var(--color3);
 }
 
 .dashboard__page__container > h1 {
@@ -10,6 +11,7 @@
 }
 
 .dashboard__header {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,7 +20,7 @@
 }
 
 .dashboard__header__icons__container {
-    background-color: aliceblue;
+    background-color: var(--color4);
     border-radius: 25px;
     padding: 1rem;
     font-size: 28px;
@@ -43,7 +45,7 @@
 }
 
 .main__content__container {
-    background-color: #ffffff;
+    background-color: var(--color4);
     min-height: 80vh;
     border-radius: 0px 25px 25px 25px;
     padding: 1rem;

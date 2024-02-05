@@ -34,7 +34,7 @@ const Dashboard = () => {
     <div className='dashboard__page__container'>
       <div className='dashboard__header'>
         <h1>
-          👋 Welcome Back,{" "}
+          🙌Welcome Back,{" "}
           {user && <span>{user.name}</span>}
         </h1>
 
