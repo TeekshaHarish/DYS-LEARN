@@ -9,7 +9,7 @@ import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <Router>
-      {/* <Routes>
+       <Routes>
         <Route path='/' element={<Login />}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/home' element={<Dashboard />}/>
