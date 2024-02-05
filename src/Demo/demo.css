@@ -1,4 +1,4 @@
-.lower,.upper{
+/* .lower,.upper{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -25,7 +25,7 @@
 }
 .ques-no{
     margin:1rem 40rem;
-    /* border:1px solid black; */
+    border:1px solid black;
     border-radius:50%;
     width:4rem;
     height:4rem;
@@ -33,10 +33,111 @@
     align-items: center;
     justify-content: center;
     font-size: 1.6rem;
-    background-color: aqua
-    
-    ;
+    background-color: aqua;
+} */
+
+/* demo.css */
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.ques-no {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.upper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.left-word,
+.right-word {
+  width: 45%;
+}
+
+.lower {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.left-input,
+.right-input {
+  width: 45%;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.result-text-holder {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.result-text {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
 .HandwritingWord{
-    font-family: 'Handwriting1';
+    font-family: 'handwriting1';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(248, 180, 91);
+    border-radius: 10px;
+    padding: 4px 10px;
+    font-size: 2rem;
 }
