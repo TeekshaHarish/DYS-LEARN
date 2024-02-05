@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'handwriting1'; /* Choose a name for your font */
-  src: url('../public/blzee.ttf') format('truetype');
+  src: url('../blzee.ttf') format('truetype');
   /* Add other font formats if needed, like woff, woff2, etc. */
 }
 body {

@@ -5,39 +5,32 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Footer from "./components/Footer/Footer";
-<<<<<<< HEAD
+
 import Demo from "./Demo/Demo";
-import Match from "./Match/Match";
-=======
->>>>>>> 420423fb03276ba2892b2d79d5397a853351281c
+import Match2 from "./Match/Match2";
+import MatchMain from "./Match/MatchMain";
+
+
 
 function App() {
   return (
     <Router>
-      <Demo />
-      <Match />
-      {/* <Routes>
-<<<<<<< HEAD
-        <Route path="/" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/home" element={<Dashboard />} />
-      </Routes>
-      <Footer />
-      <Toaster position="top-center" /> */}
-    </Router>
-  );
-=======
+     
+      {/* <Match /> */}
+      <Routes>
+
         <Route path='/' element={<Login />}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/home' element={<Dashboard />}/>
+        <Route path='/demo' element={<Demo />}/>
       </Routes>
       <Footer />
       <Toaster position="top-center" />
-      <Dashboard />
-      <Demo />
+      <MatchMain/>
+     
     </Router>
   )
->>>>>>> 420423fb03276ba2892b2d79d5397a853351281c
+
 }
 
 export default App;
