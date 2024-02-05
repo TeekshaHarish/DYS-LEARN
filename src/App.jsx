@@ -5,17 +5,20 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Footer from "./components/Footer/Footer";
+import Demo from "./Demo/Demo";
+import Match from "./Match/Match";
 
 function App() {
   return (
     <Router>
-      <Routes>
+      <Match />
+      {/* <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/home" element={<Dashboard />} />
       </Routes>
       <Footer />
-      <Toaster position="top-center" />
+      <Toaster position="top-center" /> */}
     </Router>
   );
 }

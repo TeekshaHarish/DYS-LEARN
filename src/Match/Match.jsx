@@ -1,39 +1,56 @@
-import React from "react";
-const finalSpaceCharacters = [
-  {
-    id: "gary",
-    name: "Gary Goodspeed",
-    thumb: "/images/gary.png",
-  },
-  {
-    id: "gary",
-    name: "Gary Goodspeed",
-    thumb: "/images/gary.png",
-  },
-  {
-    id: "gary",
-    name: "Gary Goodspeed",
-    thumb: "/images/gary.png",
-  },
+import React, { useState } from "react";
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+
+const initialItems = [
+  { id: "item-1", content: "Item 1" },
+  { id: "item-2", content: "Item 2" },
+  { id: "item-3", content: "Item 3" },
 ];
-const match = () => {
+
+const Match = () => {
+  const [items, setItems] = useState(initialItems);
+  console.log(items);
+
+  const onDragEnd = (result) => {
+    console.log("DRAG", result);
+    if (!result.destination) return; // Drop outside the list
+
+    const newItems = Array.from(items);
+    const [movedItem] = newItems.splice(result.source.index, 1);
+    newItems.splice(result.destination.index, 0, movedItem);
+
+    setItems(newItems);
+  };
+
   return (
-    <div>
-      match
-      <ul className="characters">
-        {finalSpaceCharacters.map(({ id, name, thumb }) => {
-          return (
-            <li key={id}>
-              <div className="characters-thumb">
-                <img src={thumb} alt={`${name} Thumb`} />
-              </div>
-              <p>{name}</p>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <DragDropContext onDragEnd={onDragEnd}>
+      <Droppable droppableId="droppable">
+        {(provided) => (
+          <ul
+            className="drag-and-drop-list"
+            {...provided.droppableProps}
+            ref={provided.innerRef}
+          >
+            {items.map((item, index) => (
+              <Draggable key={item.id} draggableId={item.id} index={index}>
+                {(provided) => (
+                  <li
+                    ref={provided.innerRef}
+                    {...provided.draggableProps}
+                    {...provided.dragHandleProps}
+                  >
+                    {item.content}
+                    {console.log(item.id)}
+                  </li>
+                )}
+              </Draggable>
+            ))}
+            {provided.placeholder}
+          </ul>
+        )}
+      </Droppable>
+    </DragDropContext>
   );
 };
 
-export default match;
+export default Match;
