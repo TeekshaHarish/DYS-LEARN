@@ -130,3 +130,14 @@ input {
   color: #333;
   font-weight: bold;
 }
+
+.HandwritingWord{
+    font-family: 'handwriting1';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(248, 180, 91);
+    border-radius: 10px;
+    padding: 4px 10px;
+    font-size: 2rem;
+}
