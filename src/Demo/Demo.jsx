@@ -39,10 +39,10 @@ const InputElement = ({ promptWord1, promptWord2, onSubmit }) => {
     <div>
       <div className="upper">
         <div className="left-word">
-          <p>{promptWord1}</p>
+          <p className="HandwritingWord">{promptWord1}</p>
         </div>
         <div className="right-word">
-          <p>{promptWord2}</p>
+          <p className="HandwritingWord">{promptWord2}</p>
         </div>
       </div>
 
