@@ -38,6 +38,10 @@
 
 /* demo.css */
 
+/* Assuming a base font size of 16px for the entire document */
+
+@import url("/src/color.css");
+
 .container {
   max-width: 600px;
   margin: auto;
@@ -50,6 +54,7 @@
 h2 {
   text-align: center;
   color: #333;
+  font-size: 35px; /* Increased font size */
 }
 
 form {
@@ -57,14 +62,16 @@ form {
   justify-content: space-between;
   margin-bottom: 20px;
 }
-
+.cssforlabel{
+  font-size: 25px;
+}
 select {
   padding: 8px;
-  font-size: 16px;
+  font-size: 20px; /* Increased font size */
 }
 
 .ques-no {
-  font-size: 18px;
+  font-size: 30px; /* Increased font size */
   font-weight: bold;
   color: #333;
 }
@@ -78,6 +85,7 @@ select {
 .left-word,
 .right-word {
   width: 45%;
+  font-size: 25px;
 }
 
 .lower {
@@ -100,24 +108,30 @@ label {
 
 input {
   width: 100%;
-  padding: 10px;
-  font-size: 16px;
+  padding: 12px; /* Increased padding */
+  font-size: 18px; /* Increased font size */
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 .submit-button {
-  background-color: #4caf50;
-  color: #fff;
-  padding: 10px 15px;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  width: 50%;
+  background: var(--color3);
+  border-radius: 15px;
+  border: 0;
   cursor: pointer;
+  color: black;
+  font-size: 28px; /* Increased font size */
+  padding-top: 12px; /* Increased padding */
+  padding-bottom: 12px; /* Increased padding */
+  transition: all 0.3s;
+  margin-top: 10px;
+  font-weight: 500;
 }
 
 .submit-button:hover {
-  background-color: #45a049;
+  background-color: var(--color2);
 }
 
 .result-text-holder {
@@ -126,7 +140,7 @@ input {
 }
 
 .result-text {
-  font-size: 18px;
+  font-size: 24px; /* Increased font size */
   color: #333;
   font-weight: bold;
 }
