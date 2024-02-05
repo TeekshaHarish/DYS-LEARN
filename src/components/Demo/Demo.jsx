@@ -39,10 +39,10 @@ const InputElement = ({ promptWord1, promptWord2, onSubmit }) => {
     <div>
       <div className="upper">
         <div className="left-word">
-          <p>{promptWord1}</p>
+          <p className="HandwritingWord">{promptWord1}</p>
         </div>
         <div className="right-word">
-          <p>{promptWord2}</p>
+          <p className="HandwritingWord">{promptWord2}</p>
         </div>
       </div>
 
@@ -131,12 +131,20 @@ const Demo = () => {
 
   const submitFilter = (e) => {
     e.preventDefault();
-    console.log(e.target.level.value);
     const lvl = e.target.level.value;
     if (lvl === "level1") setLevelArray(level1);
     else if (lvl === "level2") setLevelArray(level2);
     else setLevelArray(level3);
-    console.log("New array ", levelArray);
+    Reset();
+    // console.log("New array ", levelArray);
+  };
+
+  const Reset = () => {
+    setInputValues1([]);
+    setInputValues2([]);
+    setCurrentPromptIndex(0);
+    setResultText("");
+    const takenWords = takeRandomElements(levelArray, 5);
   };
 
   return (
@@ -162,6 +170,7 @@ const Demo = () => {
             <p className="result-text">{resultText}</p>
           </div>
         )}
+        <button onClick={Reset}>Reset</button>
       </div>
     </div>
   );

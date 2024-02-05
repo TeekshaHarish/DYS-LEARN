@@ -160,7 +160,7 @@ const Demo = () => {
           <button value="level3" className='secondary__btn'>LEVEL 3</button>
 
         </div> */}
-        <div className="ques-no">{`${currentPromptIndex + 1}/10`}</div>
+        <div align="center" className="ques-no">{`${currentPromptIndex + 1}/10`}</div>
         <InputElement
           promptWord1={takenWords[currentPromptIndex].pair.word1}
           promptWord2={takenWords[currentPromptIndex].pair.word2}

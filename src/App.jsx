@@ -10,16 +10,17 @@ import Match from "./Match/Match";
 function App() {
   return (
     <Router>
+      <Register/>
+      <Login/>
+      <Dashboard/>
       <Match />
-
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/home" element={<Dashboard />} />
       </Routes>
       <Footer />
-      <Toaster position="top-center" />
-      <Dashboard />
+      <Toaster position="top-center" /> */}
     </Router>
   );
 }
