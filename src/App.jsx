@@ -13,12 +13,11 @@ function App() {
         <Route path='/' element={<Login />}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/home' element={<Dashboard />}/>
-      </Routes> */}
+      </Routes>
       <Footer />
-      <Dashboard />
-      <Toaster position="top-center" />
+      <Toaster position='top-center' />
     </Router>
-  );
+  )
 }
 
 export default App;
