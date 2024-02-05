@@ -5,19 +5,22 @@ import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Dashboard from './pages/Dashboard/Dashboard'
 import Footer from './components/Footer/Footer'
+import Demo from './Demo/Demo'
 
 function App() {
 
   return (
     <Router>
-      <Routes>
+      {/* <Routes>
         <Route path='/' element={<Login />}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/home' element={<Dashboard />}/>
-      </Routes>
-      <Footer />
-      <Toaster position='top-center' />
+      </Routes> */}
+      {/* <Footer /> */}
+      {/* <Toaster position='top-center' /> */}
+      <Demo/>
     </Router>
+   
   )
 }
 
