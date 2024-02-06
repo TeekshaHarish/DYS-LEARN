@@ -8,6 +8,7 @@ import TextToSpeech from "../../components/TextToSpeech/TextToSpeech";
 import Summary from "../../components/Summary/Summary";
 import SpeechToText from "../../components/SpeechToText/SpeechToText";
 import FlashCards from "../../components/FlashCards/FlashCards";
+import TextToText from "../../components/TextToText/TextToText";
 import "./Dashboard.css";
 
 const Dashboard = () => {
@@ -58,6 +59,7 @@ const Dashboard = () => {
           {activeComponent === "summary" && <Summary />}
           {activeComponent === "tts" && <TextToSpeech />}
           {activeComponent === "cards" && <FlashCards />}
+          {activeComponent === "ttt" && <TextToText />}
         </div>
       </div>
     </div>
