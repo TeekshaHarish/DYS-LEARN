@@ -1,0 +1,47 @@
+/* .match-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.left,.right{
+    width:25%;
+}
+.item-left{
+    border:1px solid brown;
+    padding:2rem;
+    width:80%;
+    margin:2rem auto;
+    font-size: 1.8rem;
+}
+ul{
+    list-style-type:none;
+} */
+
+.match-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .left{
+    width: 90%;
+  }
+  .right {
+    width: 25%;
+  }
+  
+  .item-left {
+    border: 1px solid rgb(91, 23, 23);
+    padding: 2rem;
+    width: 70%;
+    margin: 2rem auto;
+    font-size: 1.8rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  

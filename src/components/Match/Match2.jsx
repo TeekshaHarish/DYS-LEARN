@@ -1,10 +1,10 @@
 // DragDropList.js
-import React, { useState } from 'react';
-import { DndProvider, useDrag, useDrop } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
-import { takeRandomElements } from '../utils/functions';
+import React, { useState } from "react";
+import { DndProvider, useDrag, useDrop } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import { takeRandomElements } from "../../utils/functions";
 
-const ItemType = 'LIST_ITEM';
+const ItemType = "LIST_ITEM";
 
 const DraggableListItem = ({ id, text, index, moveItem }) => {
   const [, ref] = useDrag({
@@ -21,16 +21,16 @@ const DraggableListItem = ({ id, text, index, moveItem }) => {
       }
     },
   });
-const itemStyles={
-    'border': '1px solid brown',
-    padding: '2rem',
-    'width':'80%',
-    margin:'auto',
-    margin:'2rem auto',
-    fontFamily:'handwriting1',
-    fontSize:'2rem',
+  const itemStyles = {
+    border: "1px solid brown",
+    padding: "2rem",
+    width: "80%",
+    margin: "auto",
+    margin: "2rem auto",
+    fontFamily: "handwriting1",
+    fontSize: "2rem",
     // letterSpacing:'5px'
-}
+  };
   return (
     <div ref={(node) => ref(drop(node))} style={itemStyles}>
       {text}
@@ -39,18 +39,18 @@ const itemStyles={
 };
 
 const DragDropList = (props) => {
-const shuffledWords=takeRandomElements(props.wordArray,7);
+  const shuffledWords = takeRandomElements(props.wordArray, 7);
   const [items, setItems] = useState([...shuffledWords]);
-  const [resultText,setResultText]=useState('');
-  const ansItems=[...props.wordArray]
-  const checkItems=(items,ansItems)=>{
-    for(let i=0;i<items.length;i++){
-        if(items[i].id !== ansItems[i].id){
-            return false;
-        }
+  const [resultText, setResultText] = useState("");
+  const ansItems = [...props.wordArray];
+  const checkItems = (items, ansItems) => {
+    for (let i = 0; i < items.length; i++) {
+      if (items[i].id !== ansItems[i].id) {
+        return false;
+      }
     }
     return true;
-  }
+  };
 
   const moveItem = async (fromIndex, toIndex) => {
     // const updatedItems = [...items];
@@ -62,30 +62,30 @@ const shuffledWords=takeRandomElements(props.wordArray,7);
     let temp = updatedItems[fromIndex];
     updatedItems[fromIndex] = updatedItems[toIndex];
     updatedItems[toIndex] = temp;
-     setItems([...updatedItems]);
-   console.log(items);
-   
-    if(checkItems(updatedItems,ansItems)){
-        setResultText("Congratulations You Made it!!")
+    setItems([...updatedItems]);
+    console.log(items);
+
+    if (checkItems(updatedItems, ansItems)) {
+      setResultText("Congratulations You Made it!!");
     }
   };
 
   return (
     <DndProvider backend={HTML5Backend}>
       <div>
-       
         {items.map((item, index) => (
-          <DraggableListItem key={item.id} id={item.id} text={item.pair.word1} index={index} moveItem={moveItem} />
-         
+          <DraggableListItem
+            key={item.id}
+            id={item.id}
+            text={item.pair.word1}
+            index={index}
+            moveItem={moveItem}
+          />
         ))}
-        <div className="result-text">
-         {resultText}
-         </div>
+        <div className="result-text">{resultText}</div>
       </div>
     </DndProvider>
   );
 };
-
-
 
 export default DragDropList;

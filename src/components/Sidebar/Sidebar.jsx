@@ -26,7 +26,7 @@ const Sidebar = ({ handleButtonClick }) => {
           <span className={`sidebar__btn ${getTabClassName('tts')}`} onClick={() => handleTabClick('tts')}>Text To Speech</span>
           <span className={`sidebar__btn ${getTabClassName('cards')}`} onClick={() => handleTabClick('cards')}>Flash Cards</span>
           <span className={`sidebar__btn ${getTabClassName('ttt')}`} onClick={() => handleTabClick('ttt')}>Text To Text</span>
-
+          <span className={`sidebar__btn ${getTabClassName('m')}`} onClick={() => handleTabClick('m')}>Match The Cards</span>
       </div>
       <div className='sidebar__mobile__container'>
         <select value={activeTab} onChange={handleSelectChange}>
@@ -36,6 +36,8 @@ const Sidebar = ({ handleButtonClick }) => {
           <option value="tts">Text to Speech</option>
           <option value="cards">Flash Cards</option>
           <option value="ttt">Text To Text</option>
+          <option value="m">Match The Cards</option>
+
 
         </select>
       </div>

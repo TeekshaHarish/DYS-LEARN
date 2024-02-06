@@ -9,7 +9,9 @@ import Summary from "../../components/Summary/Summary";
 import SpeechToText from "../../components/SpeechToText/SpeechToText";
 import FlashCards from "../../components/FlashCards/FlashCards";
 import TextToText from "../../components/TextToText/TextToText";
+import Match from "../../components/Match/MatchMain";
 import "./Dashboard.css";
+import MatchMain from "../../components/Match/MatchMain";
 
 const Dashboard = () => {
   const [activeComponent, setActiveComponent] = useState("notes");
@@ -60,6 +62,7 @@ const Dashboard = () => {
           {activeComponent === "tts" && <TextToSpeech />}
           {activeComponent === "cards" && <FlashCards />}
           {activeComponent === "ttt" && <TextToText />}
+          {activeComponent === "m" && <MatchMain />}
         </div>
       </div>
     </div>
