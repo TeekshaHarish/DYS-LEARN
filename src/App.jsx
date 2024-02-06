@@ -7,8 +7,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Footer from "./components/Footer/Footer";
 import Demo from "./Demo/Demo";
 import Match from "./Match/Match";
-=======
->>>>>>> 420423fb03276ba2892b2d79d5397a853351281c
+
 
 function App() {
   return (
