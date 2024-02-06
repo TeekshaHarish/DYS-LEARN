@@ -7,19 +7,23 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Footer from "./components/Footer/Footer";
 import Demo from "./Demo/Demo";
 import Match from "./Match/Match";
+import Dictation from "./components/Dictation/Dictation";
 
 function App() {
   return (
     <Router>
-      <Demo />
-      <Match />
-      {/* <Routes>
+      {/* <Demo />
+      <Match /> */}
+      {/* <Dictation /> */}
+      <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/home" element={<Dashboard />} />
+
+        <Route path="/dictation" element={<Dictation />} />
       </Routes>
       <Footer />
-      <Toaster position="top-center" /> */}
+      <Toaster position="top-center" />
     </Router>
   );
 }
