@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import "./demo.css";
-import { level3 } from "../seeds/level_3";
-import { level2 } from "../seeds/level_2";
-import { level1 } from "../seeds/level_1";
+import "./TextToText.css";
+import { level3 } from "./seeds/level_3";
+import { level2 } from "./seeds/level_2";
+import { level1 } from "./seeds/level_1";
 
 const calcScore = (input1, input2, takenWords) => {
   let score = 0;
@@ -36,20 +36,22 @@ const InputElement = ({ promptWord1, promptWord2, onSubmit }) => {
   };
 
   return (
-    <div>
+    <div align="center">
       <div className="upper">
         <div className="left-word">
-          <p className="HandwritingWord">{promptWord1}</p>
+          <p>{promptWord1}</p>
         </div>
         <div className="right-word">
-          <p className="HandwritingWord">{promptWord2}</p>
+          <p>{promptWord2}</p>
         </div>
       </div>
 
       <form onSubmit={handleSubmit}>
         <div className="lower">
           <div className="left-input">
-            <label htmlFor="input1">Enter word1 </label>
+            <label className="cssforlabel" htmlFor="input1">
+              Enter word1{" "}
+            </label>
 
             <input
               type="text"
@@ -58,7 +60,9 @@ const InputElement = ({ promptWord1, promptWord2, onSubmit }) => {
             />
           </div>
           <div className="right-input">
-            <label htmlFor="input2">Enter word2</label>
+            <label className="cssforlabel" htmlFor="input2">
+              Enter word2
+            </label>
             <input
               type="text"
               value={inputValue2}
@@ -66,11 +70,10 @@ const InputElement = ({ promptWord1, promptWord2, onSubmit }) => {
             />
           </div>
         </div>
-
-        <button type="submit" className="submit-button">
-          Submit
-        </button>
       </form>
+      <button type="submit" className="submit-button">
+        Submit
+      </button>
     </div>
   );
 };
@@ -131,20 +134,12 @@ const Demo = () => {
 
   const submitFilter = (e) => {
     e.preventDefault();
+    console.log(e.target.level.value);
     const lvl = e.target.level.value;
     if (lvl === "level1") setLevelArray(level1);
     else if (lvl === "level2") setLevelArray(level2);
     else setLevelArray(level3);
-    Reset();
-    // console.log("New array ", levelArray);
-  };
-
-  const Reset = () => {
-    setInputValues1([]);
-    setInputValues2([]);
-    setCurrentPromptIndex(0);
-    setResultText("");
-    const takenWords = takeRandomElements(levelArray, 5);
+    console.log("New array ", levelArray);
   };
 
   return (
@@ -159,7 +154,13 @@ const Demo = () => {
           </select>
           <button type="submit">Choose Level</button>
         </form>
-        <div className="ques-no">{`${currentPromptIndex + 1}/10`}</div>
+        {/* <div className='tabs__container'>
+          <button value="level1" className='secondary__btn'>LEVEL 1</button>
+          <button value="level2" className='secondary__btn'>LEVEL 2</button>
+          <button value="level3" className='secondary__btn'>LEVEL 3</button>
+
+        </div> */}
+        <div align="center" className="ques-no">{`${currentPromptIndex + 1}/10`}</div>
         <InputElement
           promptWord1={takenWords[currentPromptIndex].pair.word1}
           promptWord2={takenWords[currentPromptIndex].pair.word2}
@@ -170,7 +171,6 @@ const Demo = () => {
             <p className="result-text">{resultText}</p>
           </div>
         )}
-        <button onClick={Reset}>Reset</button>
       </div>
     </div>
   );
