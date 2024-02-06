@@ -1,9 +1,9 @@
 import React from "react";
 import Match2 from "./Match2";
 import "./match-main.css";
-import { level1 } from "../TextToText/seeds/level_1";
+import { level1 } from "../../seeds/level_1";
 import { takeRandomElements } from "../../utils/functions";
-const items = takeRandomElements(level1, 7);
+const items = takeRandomElements(level1, 5);
 const MatchMain = () => {
   return (
     <div>
