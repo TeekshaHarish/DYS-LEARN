@@ -7,11 +7,13 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Footer from "./components/Footer/Footer";
 import Match from "./components/Match/Match";
 import Dictation from "./components/Dictation/Dictation";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   return (
     <Router>
       {/* <Register /> */}
+      <Profile />
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />

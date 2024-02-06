@@ -9,6 +9,7 @@ const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [age, setAge] = useState(0);
   const navigate = useNavigate();
 
   const handleRegistration = async () => {
@@ -17,6 +18,7 @@ const Register = () => {
         name,
         email,
         password,
+        age,
       });
 
       if (res.status === 201 && res.data.user) {
@@ -59,6 +61,14 @@ const Register = () => {
               onChange={(e) => setPassword(e.target.value)}
               type="password"
               placeholder="Password"
+            />
+            <br />
+            <input
+              className="age__input"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+              type="number"
+              placeholder="Age"
             />
             <br />
             <input

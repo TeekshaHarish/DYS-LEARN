@@ -1,0 +1,162 @@
+@import url("/src/color.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.profile_main {
+    display: flex;
+    background: #f8f4ec;
+    width: 100vw;
+    height: 100vh;
+}
+
+.personal_details {
+    background-color: #d63484;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.personal_top_bar {
+    background-color: #e61c81;
+    height: 8%;
+    width: 30vw;
+    color: #f8f4ec;
+    text-align: center;
+    padding-top: 2vh;
+    font-size: 5vh;
+}
+
+.profile_logo {
+    margin-top: 2vh;
+    background-color: #402b3a;
+    height: 15vw;
+    border-radius: 50%;
+    width: 15vw;
+    /* text-align: center; */
+    font-size: 12vw;
+    color: #f8f4ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.report_card {
+    background-color: #ff9bd2;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.report_card_header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.complete_details {
+    margin-top: 2vh;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.details_list_item,
+.game_details_level {
+    margin-top: 2vh;
+    font-size: 3vh;
+    font-weight: 900;
+    color: #f8f4ec;
+}
+
+.horizontal_break {
+    margin-top: 2vh;
+    background-color: #f8f4ec;
+    height: 0.2vh;
+    width: 28vw;
+    align-self: center;
+}
+
+.game_details {
+    align-self: flex-start;
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+
+.report_card_header {
+    background-color: #ff6fcf;
+    height: 8%;
+    width: 70vw;
+    color: #f8f4ec;
+    text-align: center;
+    padding-top: 2vh;
+    font-size: 5vh;
+}
+
+.game_graphs {
+    background-color: #ff6fcfbe;
+    height: 60vh;
+    width: 65vw;
+    margin-top: 2vh;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.row {
+    display: flex;
+    height: 30vh;
+    width: 65vw;
+    justify-content: space-evenly;
+}
+
+.graph {
+    margin-top: 2vh;
+    background-color: #402b3a;
+    height: 25vh;
+    width: 25vw;
+    border-radius: 8px;
+    padding-left: 6px;
+    padding-top: 3px;
+    color:#f8f4ec;
+    
+}
+
+.features_count {
+    background-color: #ff6fcfbe;
+    height: 30vh;
+    width: 65vw;
+    margin-top: 2vh;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.counter {
+    margin-top: 2vh;
+    background-color: #402b3a;
+    height: 25vh;
+    width: 15vw;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: #f8f4ec;
+    text-align: center;
+    font-size: 4.5vh;
+}
+
+.graph_image{
+    width: 23vw;
+    height: 21vh;   
+}
