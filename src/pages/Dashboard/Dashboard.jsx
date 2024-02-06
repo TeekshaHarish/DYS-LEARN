@@ -10,6 +10,7 @@ import SpeechToText from "../../components/SpeechToText/SpeechToText";
 import FlashCards from "../../components/FlashCards/FlashCards";
 import TextToText from "../../components/TextToText/TextToText";
 import "./Dashboard.css";
+import HandToText from "../../components/HandToText/HandToText";
 
 const Dashboard = () => {
   const [activeComponent, setActiveComponent] = useState("notes");
@@ -54,12 +55,13 @@ const Dashboard = () => {
       <div className="dashboard__page__main">
         <Sidebar handleButtonClick={handleButtonClick} />
         <div className="main__content__container">
-          {activeComponent === "notes" && <Notes />}
+          {/* {activeComponent === "notes" && <Notes />} */}
           {activeComponent === "stt" && <SpeechToText />}
           {activeComponent === "summary" && <Summary />}
-          {activeComponent === "tts" && <TextToSpeech />}
+          {/* {activeComponent === "tts" && <TextToSpeech />} */}
           {activeComponent === "cards" && <FlashCards />}
           {activeComponent === "ttt" && <TextToText />}
+          {activeComponent === "htt" && <HandToText />}
         </div>
       </div>
     </div>

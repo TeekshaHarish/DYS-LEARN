@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./TextToText.css";
+import "./handtotext.css";
 import { level3 } from "../../seeds/level_3";
 import { level2 } from "../../seeds/level_2";
 import { level1 } from "../../seeds/level_1";
@@ -38,10 +38,10 @@ const InputElement = ({ promptWord1, promptWord2, onSubmit }) => {
   return (
     <div align="center">
       <div className="upper">
-        <div className="left-word ">
+        <div className="left-word HandwritingWord">
           <p>{promptWord1}</p>
         </div>
-        <div className="right-word">
+        <div className="right-word HandwritingWord">
           <p>{promptWord2}</p>
         </div>
       </div>
@@ -101,7 +101,7 @@ function takeRandomElements(inputArray, numElements) {
   return randomElements;
 }
 
-const Demo = () => {
+const HandToText = () => {
   const [inputValues1, setInputValues1] = useState([]);
   const [inputValues2, setInputValues2] = useState([]);
   const [currentPromptIndex, setCurrentPromptIndex] = useState(0);
@@ -178,4 +178,4 @@ const Demo = () => {
   );
 };
 
-export default Demo;
+export default HandToText;

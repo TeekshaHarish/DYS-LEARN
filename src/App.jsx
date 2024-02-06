@@ -11,17 +11,15 @@ import Dictation from "./components/Dictation/Dictation";
 function App() {
   return (
     <Router>
-      <Register />
-      <Login />
-      <Dashboard />
-      <Match />
+      {/* <Register /> */}
       <Routes>
+
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/home" element={<Dashboard />} />
-
-        <Route path="/dictation" element={<Dictation />} />
       </Routes>
+
+     
       <Footer />
       <Toaster position="top-center" />
     </Router>

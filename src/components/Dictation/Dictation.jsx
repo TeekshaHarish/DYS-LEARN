@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import { useAuthContext } from "../../hooks/useAuthContext";
 // import Speech from "speak-tts";
 // import "./TextToSpeech.css";
-import gtts from "gtts";
+// import gtts from "gtts";
 
 import { speech_level_1 } from "../../seeds/speech_level_1";
 import { div } from "@tensorflow/tfjs";
